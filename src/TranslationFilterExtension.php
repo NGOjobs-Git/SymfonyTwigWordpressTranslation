@@ -1,19 +1,16 @@
 <?php
 
-
 namespace Phylogram\SymfonyTwigWordpressTranslation;
 
-
-use Twig\Extension\AbstractExtension;
 use Twig\TwigFilter;
 
-class TranslationFilterExtension extends AbstractExtension
+class TranslationFilterExtension
 {
 
-    public function getFilters()
+    static public function getFilters()
     {
         return [
-            new TwigFilter('trans', [$this, '__'])
+            new TwigFilter('trans', [self::class, '__'])
         ];
     }
 
