@@ -14,7 +14,7 @@ class TranslationFilterExtension
         ];
     }
 
-    public function __($value) {
+    public static function __($value) {
         return __($value);
     }
 
