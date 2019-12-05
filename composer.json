@@ -1,0 +1,25 @@
+{
+    "name": "phylogram/symfony-twig-wordpress-translation",
+    "description": "translation filters for twig / symfony bridge by wordpress",
+    "type": "library",
+    "require": {
+        "twig/twig": "3.0.*"
+    },
+    "require-dev": {
+        "psy/psysh": "^0.9.11"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "phylogram",
+            "email": "philip.roeggla@phylogram.eu"
+        }
+    ],
+    "minimum-stability": "stable",
+
+    "autoload": {
+        "psr-4": {
+            "Phylogram\\SymfonyTwigWordpressTranslation\\": "src"
+        }
+    }
+}
