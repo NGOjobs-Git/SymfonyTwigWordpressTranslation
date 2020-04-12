@@ -7,6 +7,16 @@ use Twig\TwigFilter;
 class TranslationFilterExtension
 {
 
+    /**
+     * @var string
+     */
+    private $default_domain;
+
+    public function __construct(string $default_domain)
+    {
+        $this->default_domain = $default_domain;
+    }
+
     static public function getFilters()
     {
         return [
@@ -26,7 +36,8 @@ class TranslationFilterExtension
      * @param int|null $count
      * @return mixed
      */
-    public static function __(string $message, array $arguments = [], string $domain = null, string $locale = null, int $count = null) {
+    public function __(string $message, array $arguments = [], string $domain = null, string $locale = null, int $count = null) {
+        $domain = $domain ?? $this->default_domain;
         return __($message, $domain);
     }
 
