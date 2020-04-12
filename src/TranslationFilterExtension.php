@@ -17,10 +17,10 @@ class TranslationFilterExtension
         $this->default_domain = $default_domain;
     }
 
-    static public function getFilters()
+    public function getFilters()
     {
         return [
-            new TwigFilter('trans', [self::class, '__'])
+            new TwigFilter('trans', [$this, '__'])
         ];
     }
 
