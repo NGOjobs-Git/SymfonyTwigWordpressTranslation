@@ -3,7 +3,7 @@
     "description": "translation filters for twig / symfony bridge by wordpress",
     "type": "library",
     "require": {
-        "twig/twig": "3.0.*"
+        "twig/twig": "3.0.* || 3.4.*"
     },
     "require-dev": {
         "psy/psysh": "^0.9.11"
